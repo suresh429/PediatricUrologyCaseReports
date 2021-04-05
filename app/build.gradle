@@ -3,6 +3,14 @@ apply plugin: 'com.android.application'
 android {
 
 
+    signingConfigs {
+        release {
+            storeFile file('D:\\OmicsProjects\\PediatricUrologyCaseReports\\jks\\pediatricurologycasereports.jks')
+            storePassword 'pediatricurologycasereports'
+            keyAlias 'pediatricurologycasereports'
+            keyPassword 'pediatricurologycasereports'
+        }
+    }
     compileSdkVersion 30
     buildToolsVersion '30.0.3'
 
@@ -13,6 +21,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
 
 
     }
